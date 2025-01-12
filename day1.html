@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trading Mistakes to Avoid</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .slide {
+        display: none;
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .slide.active {
+        display: block;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .controls {
+        margin-top: 20px;
+      }
+
+      .controls button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        transition: background-color 0.3s;
+      }
+
+      .controls button:hover {
+        background-color: #0056b3;
+      }
+
+      .controls button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slide active" id="slide1">
+        <h1>Trading Mistakes to Avoid</h1>
+        <h2>1. Lack of Vision: Random Trading Without Strategy</h2>
+        <p>
+          A clear trading strategy is the backbone of success in the financial
+          markets. Without a vision or structured plan, trades become impulsive,
+          akin to gambling.
+        </p>
+        <p>
+          <strong>Solution:</strong> Develop a concrete plan, whether it's a
+          technical strategy like breakout trading or a fundamental approach.
+          Test it rigorously before implementation.
+        </p>
+      </div>
+      <div class="slide" id="slide2">
+        <h2>2. Ignoring Stop Losses: The Five Types of Trades</h2>
+        <p>
+          Loss management is the cornerstone of trading discipline. Every trade
+          falls into one of these categories:
+        </p>
+        <ul>
+          <li>Profit</li>
+          <li>Big Profit</li>
+          <li>Break-even</li>
+          <li>Loss</li>
+          <li>Big Loss</li>
+        </ul>
+        <p>
+          Big losses should never happen. Trading is a business, and the "cost"
+          of this business is the stop loss (SL).
+        </p>
+        <p>
+          <strong>Golden Rule:</strong> If a trade goes wrong, take the SL and
+          exit. Avoid averaging down on losing positions.
+        </p>
+        <p>
+          <strong>Case Study:</strong> A wealthy trader once ignored SL in crude
+          oil trades, averaging his position. The market didn’t reverse, and he
+          lost everything—home, family, and financial stability.
+        </p>
+        <p>
+          <strong>Actionable Tip:</strong> Use a risk-to-reward ratio of 1:2 or
+          better. For instance, if you're risking 20 points in Sensex, aim to
+          gain 40 points. Recovery is possible with one big profitable trade.
+        </p>
+      </div>
+      <div class="slide" id="slide3">
+        <h2>3. Overtrading</h2>
+        <p>
+          Many traders fall into the trap of overtrading, taking 20–60 trades a
+          day, hoping for quick profits. Even seasoned traders rarely exceed
+          three trades a day.
+        </p>
+        <p><strong>Smart Approach:</strong></p>
+        <ul>
+          <li>
+            Take one trade. If profitable, risk 50% of the profit on a second
+            trade.
+          </li>
+          <li>
+            If the first trade results in a loss, aim for break-even on the
+            second.
+          </li>
+          <li>
+            Stop trading after two consecutive losses and return the next day.
+          </li>
+        </ul>
+        <p>
+          <strong>Top 1% Rule:</strong> The world’s best traders take a maximum
+          of five trades a day.
+        </p>
+      </div>
+      <div class="slide" id="slide4">
+        <h2>4. BTST and Intraday Trading</h2>
+        <p>
+          BTST (Buy Today, Sell Tomorrow) is a strategy where traders buy stocks
+          intending to sell them the next day. However, overnight market risks
+          can wipe out gains.
+        </p>
+        <p>
+          Intraday trades are more predictable but require disciplined entry and
+          exit points. Avoid holding positions beyond the trading session to
+          minimize risk.
+        </p>
+      </div>
+      <div class="slide" id="slide5">
+        <h2>5. Don’t Try to Prove the Market Wrong</h2>
+        <p>
+          The market is always right. Trading against the trend or trying to
+          force a reversal can lead to significant losses.
+        </p>
+        <p>
+          <strong>Advice:</strong> Respect the market's direction and avoid
+          emotional trading.
+        </p>
+      </div>
+      <div class="slide" id="slide6">
+        <h2>6. Avoiding Random Trade Tips</h2>
+        <p>
+          Following unverified tips from Telegram or WhatsApp can be disastrous.
+        </p>
+        <p>
+          <strong>Solution:</strong> Stick to your analysis and avoid the herd
+          mentality. Develop confidence in your strategy.
+        </p>
+      </div>
+      <div class="slide" id="slide7">
+        <h2>7. Selecting OTM Strike Prices in Options</h2>
+        <p>
+          Out-of-the-Money (OTM) options may seem cheap, but they decay rapidly
+          as expiration nears.
+        </p>
+        <p>
+          <strong>Concept:</strong> Options lose value over time (time decay),
+          especially if they're far from the underlying asset's price.
+        </p>
+        <p>
+          <strong>Alternative:</strong> Stick to In-the-Money (ITM) or, at
+          worst, At-the-Money (ATM) options for better profitability.
+        </p>
+      </div>
+      <div class="slide" id="slide8">
+        <h2>8. Overexposing Capital</h2>
+        <p>
+          <strong>Mistake:</strong> Allocating all your capital to one trade or
+          stock.
+        </p>
+        <p>
+          <strong>Solution:</strong> Diversify. Beginners should focus on stock
+          and swing trading before venturing into complex instruments.
+        </p>
+      </div>
+      <div class="slide" id="slide9">
+        <h2>9. Preparation Before Taking a Trade</h2>
+        <p>
+          <strong>Do What the Chart Says:</strong> Base decisions on strategies
+          like the Big Bar Strategy or the 9:30 AM Strategy.
+        </p>
+        <p><strong>Identify the Trend:</strong></p>
+        <ul>
+          <li>Uptrend → Take call positions on dips.</li>
+          <li>Downtrend → Take put positions on retracements.</li>
+        </ul>
+        <p>
+          <strong>Trendlines:</strong> Use higher highs and higher lows for
+          uptrends; lower highs and lower lows for downtrends.
+        </p>
+        <p><strong>Checklist:</strong></p>
+        <ul>
+          <li>Emotions in check.</li>
+          <li>No random trades.</li>
+          <li>Entry and exit points defined.</li>
+          <li>Stop Loss (SL) in place.</li>
+          <li>Risk-to-reward ratio calculated.</li>
+          <li>Quantity determined.</li>
+        </ul>
+      </div>
+      <div class="slide" id="slide10">
+        <h2>10. Post-Trade Actions</h2>
+        <p>
+          <strong>Maintain a trading journal</strong> to track decisions,
+          emotions, and outcomes.
+        </p>
+        <p>
+          <strong>Advice:</strong> Avoid carrying excitement or regret from
+          previous trades into new ones. Follow the "Trade Less, Book More"
+          strategy to maximize profits. Celebrate wins responsibly—donate a
+          portion of your earnings for good karma.
+        </p>
+      </div>
+      <div class="slide" id="slide11">
+        <h2>11. Stick to Your Strategy</h2>
+        <p>
+          Changing strategies frequently can lead to inconsistent results. Trust
+          your process, but review and refine it regularly.
+        </p>
+      </div>
+      <div class="slide" id="slide12">
+        <h2>12. Avoid Showing Off</h2>
+        <p>
+          Whether you're winning or losing, keep your trading journey private.
+          Ego-driven trading leads to emotional decisions and losses.
+        </p>
+      </div>
+      <div class="slide" id="slide13">
+        <h2>13. Take Breaks</h2>
+        <p>
+          Trading can be mentally taxing. After a streak (win or lose), take a
+          step back to recharge and reassess your strategies.
+        </p>
+      </div>
+      <div class="slide" id="slide14">
+        <h2>Final Thoughts</h2>
+        <p>
+          Trading is an art and a discipline. By avoiding common mistakes,
+          maintaining emotional balance, and sticking to a well-thought-out
+          strategy, you can set yourself on the path to consistent
+          profitability. Notes of this section are available here:
+          <a
+            href="https://drive.google.com/file/d/1U410yN9mIiZjHW445RXfp0JOLkVszHh2/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Notes
+          </a>
+        </p>
+
+        <p>
+          <strong>Advice:</strong> Treat trading as a business, respect the
+          market, and always prioritize risk management.
+        </p>
+      </div>
+
+      <div class="controls">
+        <button id="prevButton" disabled>Previous</button>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
+
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+
+      function updateSlides() {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("active", index === currentSlide);
+        });
+        prevButton.disabled = currentSlide === 0;
+        nextButton.disabled = currentSlide === slides.length - 1;
+      }
+
+      prevButton.addEventListener("click", () => {
+        if (currentSlide > 0) currentSlide--;
+        updateSlides();
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentSlide < slides.length - 1) currentSlide++;
+        updateSlides();
+      });
+
+      updateSlides();
+    </script>
+  </body>
+</html>
