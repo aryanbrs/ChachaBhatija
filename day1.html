@@ -13,10 +13,54 @@
 
       .container {
         display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
         overflow: hidden;
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #343a40;
+        color: white;
+        padding: 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar h3 {
+        margin-top: 0;
+        text-align: center;
+        color: #f8f9fa;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+
+      .sidebar ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #495057;
+      }
+
+      .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .slide {
@@ -28,10 +72,20 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         padding: 20px;
+        animation: fadeIn 0.5s ease;
       }
 
       .slide.active {
         display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       h1,
@@ -68,229 +122,234 @@
         background-color: #ccc;
         cursor: not-allowed;
       }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          box-shadow: none;
+        }
+
+        .main {
+          flex: 1;
+          padding: 10px;
+        }
+      }
     </style>
   </head>
+
   <body>
     <div class="container">
-      <div class="slide active" id="slide1">
-        <h1>Trading Mistakes to Avoid</h1>
-        <h2>1. Lack of Vision: Random Trading Without Strategy</h2>
-        <p>
-          A clear trading strategy is the backbone of success in the financial
-          markets. Without a vision or structured plan, trades become impulsive,
-          akin to gambling.
-        </p>
-        <p>
-          <strong>Solution:</strong> Develop a concrete plan, whether it's a
-          technical strategy like breakout trading or a fundamental approach.
-          Test it rigorously before implementation.
-        </p>
-      </div>
-      <div class="slide" id="slide2">
-        <h2>2. Ignoring Stop Losses: The Five Types of Trades</h2>
-        <p>
-          Loss management is the cornerstone of trading discipline. Every trade
-          falls into one of these categories:
-        </p>
-        <ul>
-          <li>Profit</li>
-          <li>Big Profit</li>
-          <li>Break-even</li>
-          <li>Loss</li>
-          <li>Big Loss</li>
-        </ul>
-        <p>
-          Big losses should never happen. Trading is a business, and the "cost"
-          of this business is the stop loss (SL).
-        </p>
-        <p>
-          <strong>Golden Rule:</strong> If a trade goes wrong, take the SL and
-          exit. Avoid averaging down on losing positions.
-        </p>
-        <p>
-          <strong>Case Study:</strong> A wealthy trader once ignored SL in crude
-          oil trades, averaging his position. The market didn’t reverse, and he
-          lost everything—home, family, and financial stability.
-        </p>
-        <p>
-          <strong>Actionable Tip:</strong> Use a risk-to-reward ratio of 1:2 or
-          better. For instance, if you're risking 20 points in Sensex, aim to
-          gain 40 points. Recovery is possible with one big profitable trade.
-        </p>
-      </div>
-      <div class="slide" id="slide3">
-        <h2>3. Overtrading</h2>
-        <p>
-          Many traders fall into the trap of overtrading, taking 20–60 trades a
-          day, hoping for quick profits. Even seasoned traders rarely exceed
-          three trades a day.
-        </p>
-        <p><strong>Smart Approach:</strong></p>
+      <div class="sidebar">
+        <h3>Navigation</h3>
         <ul>
           <li>
-            Take one trade. If profitable, risk 50% of the profit on a second
-            trade.
+            <a href="#" onclick="goToSlide(0)">Slide 1: Lack of Vision</a>
           </li>
           <li>
-            If the first trade results in a loss, aim for break-even on the
-            second.
+            <a href="#" onclick="goToSlide(1)">Slide 2: Ignoring Stop Losses</a>
+          </li>
+          <li><a href="#" onclick="goToSlide(2)">Slide 3: Overtrading</a></li>
+          <li>
+            <a href="#" onclick="goToSlide(3)">Slide 4: BTST & Intraday</a>
           </li>
           <li>
-            Stop trading after two consecutive losses and return the next day.
+            <a href="#" onclick="goToSlide(4)"
+              >Slide 5: Respect Market Trends</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="goToSlide(5)">Slide 6: Avoid Random Tips</a>
+          </li>
+          <li>
+            <a href="#" onclick="goToSlide(6)">Slide 7: OTM Strike Prices</a>
+          </li>
+          <li>
+            <a href="#" onclick="goToSlide(7)">Slide 8: Overexposing Capital</a>
+          </li>
+          <li><a href="#" onclick="goToSlide(8)">Slide 9: Preparation</a></li>
+          <li>
+            <a href="#" onclick="goToSlide(9)">Slide 10: Post-Trade Actions</a>
+          </li>
+          <li>
+            <a href="#" onclick="goToSlide(10)">Slide 11: Stick to Strategy</a>
+          </li>
+          <li>
+            <a href="#" onclick="goToSlide(11)">Slide 12: Avoid Showing Off</a>
+          </li>
+          <li><a href="#" onclick="goToSlide(12)">Slide 13: Take Breaks</a></li>
+          <li>
+            <a href="#" onclick="goToSlide(13)">Slide 14: Final Thoughts</a>
           </li>
         </ul>
-        <p>
-          <strong>Top 1% Rule:</strong> The world’s best traders take a maximum
-          of five trades a day.
-        </p>
       </div>
-      <div class="slide" id="slide4">
-        <h2>4. BTST and Intraday Trading</h2>
-        <p>
-          BTST (Buy Today, Sell Tomorrow) is a strategy where traders buy stocks
-          intending to sell them the next day. However, overnight market risks
-          can wipe out gains.
-        </p>
-        <p>
-          Intraday trades are more predictable but require disciplined entry and
-          exit points. Avoid holding positions beyond the trading session to
-          minimize risk.
-        </p>
-      </div>
-      <div class="slide" id="slide5">
-        <h2>5. Don’t Try to Prove the Market Wrong</h2>
-        <p>
-          The market is always right. Trading against the trend or trying to
-          force a reversal can lead to significant losses.
-        </p>
-        <p>
-          <strong>Advice:</strong> Respect the market's direction and avoid
-          emotional trading.
-        </p>
-      </div>
-      <div class="slide" id="slide6">
-        <h2>6. Avoiding Random Trade Tips</h2>
-        <p>
-          Following unverified tips from Telegram or WhatsApp can be disastrous.
-        </p>
-        <p>
-          <strong>Solution:</strong> Stick to your analysis and avoid the herd
-          mentality. Develop confidence in your strategy.
-        </p>
-      </div>
-      <div class="slide" id="slide7">
-        <h2>7. Selecting OTM Strike Prices in Options</h2>
-        <p>
-          Out-of-the-Money (OTM) options may seem cheap, but they decay rapidly
-          as expiration nears.
-        </p>
-        <p>
-          <strong>Concept:</strong> Options lose value over time (time decay),
-          especially if they're far from the underlying asset's price.
-        </p>
-        <p>
-          <strong>Alternative:</strong> Stick to In-the-Money (ITM) or, at
-          worst, At-the-Money (ATM) options for better profitability.
-        </p>
-      </div>
-      <div class="slide" id="slide8">
-        <h2>8. Overexposing Capital</h2>
-        <p>
-          <strong>Mistake:</strong> Allocating all your capital to one trade or
-          stock.
-        </p>
-        <p>
-          <strong>Solution:</strong> Diversify. Beginners should focus on stock
-          and swing trading before venturing into complex instruments.
-        </p>
-      </div>
-      <div class="slide" id="slide9">
-        <h2>9. Preparation Before Taking a Trade</h2>
-        <p>
-          <strong>Do What the Chart Says:</strong> Base decisions on strategies
-          like the Big Bar Strategy or the 9:30 AM Strategy.
-        </p>
-        <p><strong>Identify the Trend:</strong></p>
-        <ul>
-          <li>Uptrend → Take call positions on dips.</li>
-          <li>Downtrend → Take put positions on retracements.</li>
-        </ul>
-        <p>
-          <strong>Trendlines:</strong> Use higher highs and higher lows for
-          uptrends; lower highs and lower lows for downtrends.
-        </p>
-        <p><strong>Checklist:</strong></p>
-        <ul>
-          <li>Emotions in check.</li>
-          <li>No random trades.</li>
-          <li>Entry and exit points defined.</li>
-          <li>Stop Loss (SL) in place.</li>
-          <li>Risk-to-reward ratio calculated.</li>
-          <li>Quantity determined.</li>
-        </ul>
-      </div>
-      <div class="slide" id="slide10">
-        <h2>10. Post-Trade Actions</h2>
-        <p>
-          <strong>Maintain a trading journal</strong> to track decisions,
-          emotions, and outcomes.
-        </p>
-        <p>
-          <strong>Advice:</strong> Avoid carrying excitement or regret from
-          previous trades into new ones. Follow the "Trade Less, Book More"
-          strategy to maximize profits. Celebrate wins responsibly—donate a
-          portion of your earnings for good karma.
-        </p>
-      </div>
-      <div class="slide" id="slide11">
-        <h2>11. Stick to Your Strategy</h2>
-        <p>
-          Changing strategies frequently can lead to inconsistent results. Trust
-          your process, but review and refine it regularly.
-        </p>
-      </div>
-      <div class="slide" id="slide12">
-        <h2>12. Avoid Showing Off</h2>
-        <p>
-          Whether you're winning or losing, keep your trading journey private.
-          Ego-driven trading leads to emotional decisions and losses.
-        </p>
-      </div>
-      <div class="slide" id="slide13">
-        <h2>13. Take Breaks</h2>
-        <p>
-          Trading can be mentally taxing. After a streak (win or lose), take a
-          step back to recharge and reassess your strategies.
-        </p>
-      </div>
-      <div class="slide" id="slide14">
-        <h2>Final Thoughts</h2>
-        <p>
-          Trading is an art and a discipline. By avoiding common mistakes,
-          maintaining emotional balance, and sticking to a well-thought-out
-          strategy, you can set yourself on the path to consistent
-          profitability. Notes of this section are available here:
-          <a
-            href="https://drive.google.com/file/d/1U410yN9mIiZjHW445RXfp0JOLkVszHh2/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Notes
-          </a>
-        </p>
+      <div class="main" style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; max-width: 800px; margin: auto;">
+        <div class="slide active" id="slide1" style="padding: 20px; background-color: #f9f9f9; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h1 style="font-size: 2em; color: #004080;">Trading Mistakes to Avoid</h1>
+            <h2 style="color: #0066cc;">1. Lack of Vision: Random Trading Without Strategy</h2>
+            <p>A clear trading strategy is the backbone of success in the financial markets. Without a vision or structured plan, trades become impulsive, akin to gambling. Trading without direction often leads to losses, emotional stress, and discouragement.</p>
+            <p>Many novice traders enter the market with vague ideas, often swayed by news, tips, or trends. This lack of preparation makes them vulnerable to volatility and poor decision-making.</p>
+            <p><strong>Solution:</strong> Develop a concrete plan, whether it's a technical strategy like breakout trading or a fundamental approach. Test it rigorously before implementation. Backtesting and paper trading are essential tools to refine your strategy without risking real capital.</p>
+            <p><strong>Tip:</strong> Set realistic goals. Determine whether you aim for day trading profits or long-term growth, and align your strategy accordingly.</p>
+        </div>
+    
+        <div class="slide" id="slide2" style="padding: 20px; background-color: #f9f9f9; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h2 style="color: #0066cc;">2. Ignoring Stop Losses: The Five Types of Trades</h2>
+            <p>Loss management is the cornerstone of trading discipline. Every trade falls into one of these categories:</p>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Profit</li>
+                <li>Big Profit</li>
+                <li>Break-even</li>
+                <li>Loss</li>
+                <li>Big Loss</li>
+            </ul>
+            <p>While small losses and break-even trades are part of the process, the key is to avoid "Big Losses." They can devastate your portfolio and confidence.</p>
+            <p><strong>Golden Rule:</strong> If a trade goes wrong, take the SL and exit. Avoid averaging down on losing positions—it’s like doubling down on a mistake.</p>
+            <p><strong>Case Study:</strong> A wealthy trader once ignored SL in crude oil trades, averaging his position. The market didn’t reverse, and he lost everything—home, family, and financial stability. This illustrates the peril of neglecting stop losses.</p>
+            <p><strong>Practical Advice:</strong> Define your stop loss before entering a trade. Use trailing stop losses to secure profits as the market moves in your favor.</p>
+        </div>
+    
+        <div class="slide" id="slide3" style="padding: 20px; background-color: #f9f9f9; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h2 style="color: #0066cc;">3. Overtrading</h2>
+            <p>Many traders fall into the trap of overtrading, taking 20–60 trades a day, hoping for quick profits. This behavior is counterproductive and often leads to exhaustion and losses due to emotional decisions.</p>
+            <p>Even seasoned traders rarely exceed three trades a day because they prioritize quality over quantity. The market rewards patience and precision, not impulsive actions.</p>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Take one trade. If profitable, risk 50% of the profit on a second trade.</li>
+                <li>If the first trade results in a loss, aim for break-even on the second.</li>
+                <li>Stop trading after two consecutive losses and return the next day.</li>
+            </ul>
+            <p><strong>Top 1% Rule:</strong> The world’s best traders take a maximum of five trades a day. They focus on high-probability setups and wait for the market to meet their criteria.</p>
+            <p><strong>Key Insight:</strong> Overtrading increases transaction costs, spreads, and emotional strain. Reduce trade frequency to improve focus and performance.</p>
+        </div>
+    
+        <div class="slide" id="slide4" style="padding: 20px; background-color: #f9f9f9; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h2 style="color: #0066cc;">4. BTST and Intraday Trading</h2>
+            <p>BTST (Buy Today, Sell Tomorrow) is a strategy where traders buy stocks intending to sell them the next day. While it seems attractive, overnight market risks, such as news events or global market fluctuations, can wipe out gains.</p>
+            <p>Intraday trades are more predictable but require disciplined entry and exit points. Avoid holding positions beyond the trading session to minimize risk.</p>
+            <p><strong>Key Tips:</strong></p>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Set realistic intraday targets based on market conditions.</li>
+                <li>Use technical indicators like moving averages or pivot points to plan entries and exits.</li>
+                <li>Avoid over-leveraging during BTST trades to limit exposure to overnight gaps.</li>
+            </ul>
+            <p><strong>Case Example:</strong> A trader held a BTST position overnight, expecting a gap-up. Unfortunately, an unexpected rate hike announcement caused the stock to gap down, resulting in a heavy loss. Always evaluate overnight risks before implementing this strategy.</p>
+        </div>
+    
+     <!-- Slide 5 -->
+<div class="slide" id="slide5" style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <h2 style="color: #333;">5. Don’t Try to Prove the Market Wrong</h2>
+  <p>The market has its own logic driven by countless factors like macroeconomics, news, and trader psychology. Trying to force a reversal or go against the trend often leads to frustration and losses.</p>
+  <p style="color: #555;"><strong>Key Insight:</strong> Respect the market. When the trend is against you, cut your losses and wait for a better opportunity.</p>
+  <p style="color: #777;"><strong>Example:</strong> In 2008, many traders tried to catch falling stocks during the financial crisis, assuming they had hit bottom. The result? Prolonged losses as markets continued to crash.</p>
+  <p style="background: #f9f9f9; padding: 10px; border-left: 4px solid #2196F3;">The market isn’t personal—it’s not "wrong." Adapt, and you'll be better positioned to profit.</p>
+</div>
 
-        <p>
-          <strong>Advice:</strong> Treat trading as a business, respect the
-          market, and always prioritize risk management.
-        </p>
-      </div>
+<!-- Slide 6 -->
+<div class="slide" id="slide6" style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <h2 style="color: #333;">6. Avoiding Random Trade Tips</h2>
+  <p>Following unverified trade tips from sources like Telegram groups or WhatsApp forwards is a recipe for disaster. Most of these tips lack context or analysis and are often misleading.</p>
+  <p style="color: #555;"><strong>Problem:</strong> Many traders blindly follow these tips, hoping for quick gains, only to suffer losses.</p>
+  <p style="color: #555;"><strong>Solution:</strong> Conduct your analysis and stay confident in your strategy. Use reliable data sources and tools for market insights.</p>
+  <p style="color: #777;"><strong>Case in Point:</strong> A trader lost $10,000 within a week by acting on a "hot tip" about penny stocks. The stock collapsed, and he was left with worthless shares.</p>
+  <p style="background: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50;">Trading is not about following others; it's about building your edge and trusting it.</p>
+</div>
 
-      <div class="controls">
-        <button id="prevButton" disabled>Previous</button>
-        <button id="nextButton">Next</button>
-      </div>
+<!-- Slide 7 -->
+<div class="slide" id="slide7" style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <h2 style="color: #333;">7. Selecting OTM Strike Prices in Options</h2>
+  <p>Out-of-the-Money (OTM) options seem attractive because of their lower prices, but they come with higher risks and faster time decay.</p>
+  <p style="color: #555;"><strong>Key Point:</strong> OTM options require significant price movement to become profitable, which rarely happens within short timeframes.</p>
+  <p style="color: #777;"><strong>Alternative:</strong> Stick to In-the-Money (ITM) or At-the-Money (ATM) options for better probability and lower time decay risks.</p>
+  <p style="background: #f9f9f9; padding: 10px; border-left: 4px solid #FF5722;">Options trading is about precision. Understand time decay and liquidity before taking positions.</p>
+</div>
+
+<!-- Slide 8 -->
+<div class="slide" id="slide8" style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <h2 style="color: #333;">8. Overexposing Capital</h2>
+  <p>Risking all your capital on a single trade or stock exposes you to catastrophic losses. Diversification is the key to sustainable trading.</p>
+  <p style="color: #555;"><strong>Pro Tip:</strong> Allocate no more than 1–2% of your total capital to a single trade.</p>
+  <p style="color: #777;"><strong>Beginner Tip:</strong> Focus on stock and swing trading to build experience before venturing into complex instruments like options or futures.</p>
+  <p style="background: #f9f9f9; padding: 10px; border-left: 4px solid #FF9800;">Never let one trade dictate your portfolio. Diversify, and always manage risk.</p>
+</div>
+
+<!-- Slide 9 -->
+<div class="slide" id="slide9" style="padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+  <h2 style="color: #333;">9. Preparation Before Taking a Trade</h2>
+  <p>Successful trading requires meticulous preparation. Each decision should align with a well-thought-out strategy.</p>
+  <ul style="color: #555; margin-left: 20px;">
+      <li>Define clear entry and exit points.</li>
+      <li>Calculate your risk-to-reward ratio.</li>
+      <li>Ensure your emotions are in check before trading.</li>
+  </ul>
+  <p style="background: #f9f9f9; padding: 10px; border-left: 4px solid #3F51B5;">"Failing to prepare is preparing to fail." Follow a checklist to maintain discipline.</p>
+</div>
+<div class="slide active" id="slide10" style="padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="color: #2c3e50;">10. Post-Trade Actions</h2>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;">Maintaining a trading journal is a powerful tool for self-improvement. Record your decisions, emotions, outcomes, and lessons from every trade. Over time, patterns will emerge that can inform better decisions in the future.</p>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Action Steps:</strong></p>
+  <ul style="font-size: 16px; color: #34495e; line-height: 1.6; margin-left: 20px; list-style-type: circle;">
+      <li>Document each trade's rationale and execution details.</li>
+      <li>Analyze losses and identify recurring mistakes.</li>
+      <li>Celebrate wins by acknowledging the strategy behind them.</li>
+  </ul>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Final Thought:</strong> "Trade Less, Book More" is a philosophy of quality over quantity. Avoid emotional carryover by stepping back and resetting after every trade cycle.</p>
+</div>
+
+<div class="slide" id="slide11" style="padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="color: #2c3e50;">11. Stick to Your Strategy</h2>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;">Consistency is the secret to long-term success in trading. Frequently changing strategies based on short-term results leads to confusion and inefficiency. Trust your process while keeping room for iterative improvement.</p>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Tips for Staying the Course:</strong></p>
+  <ul style="font-size: 16px; color: #34495e; line-height: 1.6; margin-left: 20px; list-style-type: circle;">
+      <li>Review your strategy monthly and refine only if necessary.</li>
+      <li>Test new methods in a simulated environment before applying them live.</li>
+      <li>Trust the data. Let results guide your adjustments, not emotions.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide12" style="padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="color: #2c3e50;">12. Avoid Showing Off</h2>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;">Trading is a personal journey. Bragging about profits or lamenting losses invites unnecessary pressure and distractions. Ego-driven trading often leads to impulsive decisions.</p>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Best Practices:</strong></p>
+  <ul style="font-size: 16px; color: #34495e; line-height: 1.6; margin-left: 20px; list-style-type: circle;">
+      <li>Maintain a low profile regardless of trading outcomes.</li>
+      <li>Engage with like-minded traders in a learning-focused environment.</li>
+      <li>Let your success be reflected in your consistency, not your boasts.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide13" style="padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="color: #2c3e50;">13. Take Breaks</h2>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;">Continuous trading without rest can lead to burnout and poor decisions. Taking regular breaks helps traders recharge, reassess, and refine their strategies.</p>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>How to Take Effective Breaks:</strong></p>
+  <ul style="font-size: 16px; color: #34495e; line-height: 1.6; margin-left: 20px; list-style-type: circle;">
+      <li>Step away from screens after significant wins or losses to reset emotionally.</li>
+      <li>Engage in activities that promote relaxation and clear thinking, like walking or reading.</li>
+      <li>Periodically review your performance and goals during downtime.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide14" style="padding: 20px; font-family: Arial, sans-serif; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+  <h2 style="color: #2c3e50;">14. Final Thoughts</h2>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;">Trading is a disciplined craft that rewards patience, learning, and strategy. Avoiding common mistakes and maintaining a balanced mindset will pave the way for sustainable success.</p>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Key Takeaways:</strong></p>
+  <ul style="font-size: 16px; color: #34495e; line-height: 1.6; margin-left: 20px; list-style-type: circle;">
+      <li>Approach trading as a business, not a gamble.</li>
+      <li>Continuously educate yourself and adapt to changing markets.</li>
+      <li>Prioritize risk management above all.</li>
+  </ul>
+  <p style="font-size: 16px; color: #34495e; line-height: 1.6;"><strong>Final Advice:</strong> Respect the market, stick to your plan, and embrace a growth mindset for a fulfilling trading journey.</p>
+</div>
+
+        <div class="controls" style="text-align: center; margin-top: 20px;">
+            <button id="prevButton" disabled style="padding: 10px 20px; background-color: #ccc; border: none; border-radius: 5px; cursor: not-allowed;">Previous</button>
+            <button id="nextButton" style="padding: 10px 20px; background-color: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer;">Next</button>
+        </div>
     </div>
-
+    
+    
     <script>
       const slides = document.querySelectorAll(".slide");
       let currentSlide = 0;
@@ -315,6 +374,11 @@
         if (currentSlide < slides.length - 1) currentSlide++;
         updateSlides();
       });
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlides();
+      }
 
       updateSlides();
     </script>
